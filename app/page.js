@@ -3,8 +3,8 @@ import { useState } from "react";
 
 const overtimeRates = {
   6: 53000, // Tarif lembur untuk level 6
-  5: 80000, // Tarif lembur untuk level 5
-  "<5": 65000, // Tarif lembur untuk level kurang dari 5
+  5: 65000, // Tarif lembur untuk level 5
+  "<5": 80000, // Tarif lembur untuk level kurang dari 5
 };
 
 export default function Home() {
