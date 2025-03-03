@@ -119,7 +119,7 @@ export default function Home() {
           Calculate
         </button>
         <a
-          href="https://wa.me/6287885462100?text=assalamualaikum,%20izin%20follow%20up%20lembur%20saya%20tidak%20terdeteksi"
+          href="https://wa.me/6287885462100?text=assalamualaikum,%20izin%20follow%20up%20lembur%20saya%20tidak%20terdeteksi%20🙏🙏"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center text-center my-2 gap-2 bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-green-600 transition"
