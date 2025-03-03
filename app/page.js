@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState } from "react";
 
 const overtimeRates = {
@@ -22,7 +22,8 @@ export default function Home() {
     const rawSalary = parseInt(salary.toString().replace(/[^\d]/g, ""), 10); // Konversi gaji ke angka
     const bpjsKetenagakerjaan = rawSalary * 0.03; // Potongan BPJS Ketenagakerjaan (3%)
     const bpjsKesehatan = rawSalary * 0.01; // Potongan BPJS Kesehatan (1%)
-    const salaryAfterDeduction = rawSalary - bpjsKetenagakerjaan - bpjsKesehatan; // Gaji setelah potongan
+    const salaryAfterDeduction =
+      rawSalary - bpjsKetenagakerjaan - bpjsKesehatan; // Gaji setelah potongan
     const totalPay = salaryAfterDeduction + overtimePay; // Total gaji setelah dikurangi dan ditambah lembur
 
     setTotal(totalPay); // Simpan total di state
@@ -46,7 +47,9 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
       <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
         <h2 className="text-2xl font-bold text-center mb-6 text-gray-700">
-          Overtime Calculator <br /> <span className="text-red-600 mb-0">Steradian</span> <br /><small className="text-sm text-gray-400">(beta version)</small>
+          Overtime Calculator <br />{" "}
+          <span className="text-red-600 mb-0">Steradian</span> <br />
+          <small className="text-sm text-gray-400">(beta version)</small>
         </h2>
         <div className="mb-4">
           <label
@@ -111,10 +114,19 @@ export default function Home() {
         </div>
         <button
           onClick={calculateOvertime}
-          className="w-full bg-orange-500 text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-orange-600 transition"
+          className="w-full my-2 bg-orange-500 text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-orange-600 transition"
         >
           Calculate
         </button>
+        <a
+          href="https://wa.me/6287885462100?text=assalamualaikum,%20izin%20follow%20up%20lembur%20saya%20tidak%20terdeteksi"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center my-2 gap-2 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-green-600 transition"
+        >
+          <FaWhatsapp className="w-6 h-6" />
+          Lapor Bu Kelvy
+        </a>
         {total > 0 && (
           <div className="mt-4 text-center font-bold text-gray-700">
             <p>Total Pay After Deductions + Overtime:</p>
@@ -122,10 +134,19 @@ export default function Home() {
               Rp {total.toLocaleString("id-ID")}
             </p>
             <div className="mt-2 text-sm text-gray-600">
-              <p>BPJS Ketenagakerjaan (3%): Rp {bpjsKetenagakerjaan.toLocaleString("id-ID")}</p>
-              <p>BPJS Kesehatan (1%): Rp {bpjsKesehatan.toLocaleString("id-ID")}</p>
+              <p>
+                BPJS Ketenagakerjaan (3%): Rp{" "}
+                {bpjsKetenagakerjaan.toLocaleString("id-ID")}
+              </p>
+              <p>
+                BPJS Kesehatan (1%): Rp {bpjsKesehatan.toLocaleString("id-ID")}
+              </p>
             </div>
-            <small className="mt-5 text-[8px]"><span className="text-red-500 text-sm">*</span> Perhitungan ini hanyalah simulasi, jika ada perbedaan hitungan bisa hubungi pihak management</small>
+            <small className="mt-5 text-[8px]">
+              <span className="text-red-500 text-sm">*</span> Perhitungan ini
+              hanyalah simulasi, jika ada perbedaan hitungan bisa hubungi pihak
+              management
+            </small>
           </div>
         )}
       </div>
