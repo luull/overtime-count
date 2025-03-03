@@ -125,7 +125,7 @@ export default function Home() {
           rel="noopener noreferrer"
           className="flex items-center my-2 gap-2 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-green-600 transition"
         >
-          <FaWhatsapp className="w-6 h-6" />
+          {/* <FaWhatsapp className="w-6 h-6" /> */}
           Lapor Bu Kelvy
         </a>
         {total > 0 && (
